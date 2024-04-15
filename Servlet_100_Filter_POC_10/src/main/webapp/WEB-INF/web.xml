@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+	id="WebApp_ID" version="5.0">
+	<display-name>Servlet_100_Filter_POC_10</display-name>
+
+
+
+	<servlet>
+		<servlet-name>HelloServlet</servlet-name>
+		<servlet-class>com.satya.HelloServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>HelloServlet</servlet-name>
+		<url-pattern>/hello</url-pattern>
+	</servlet-mapping>
+	
+	
+	<filter>
+		<filter-name>RequestLoggingFilter</filter-name>
+		<filter-class>com.satya.RequestLoggingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>RequestLoggingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+</web-app>
